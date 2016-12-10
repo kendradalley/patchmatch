@@ -10,13 +10,15 @@ exports.seed = (knex) => {
         organic: false,
         height: 2.5,
         width: 3,
-        description: 
+        number_of_spots:,
+        description:
       }, {
         id: 2,
         garden_id:
         organic: false,
         height: 6,
         width: 6,
+        number_of_spots:,
         description:
       }, {
         id: 3,
@@ -24,6 +26,7 @@ exports.seed = (knex) => {
         organic: false,
         height: 6,
         width: 6,
+        number_of_spots:,
         description:
       }, {
         id: 4,
@@ -31,6 +34,7 @@ exports.seed = (knex) => {
         organic: false,
         height: 6,
         width: 6,
+        number_of_spots:,
         description:
       }, {
         id: 5,
@@ -38,6 +42,7 @@ exports.seed = (knex) => {
         organic: false,
         height: 6,
         width: 6,
+        number_of_spots:,
         description:
       }, {
         id: 6,
@@ -45,6 +50,7 @@ exports.seed = (knex) => {
         organic: false,
         height: 6,
         width: 6,
+        number_of_spots:,
         description:
       }, {
         id: 7,
@@ -52,6 +58,7 @@ exports.seed = (knex) => {
         organic: false,
         height: 6,
         width: 6,
+        number_of_spots:,
         description:
       }, {
         id: 8,
@@ -59,6 +66,7 @@ exports.seed = (knex) => {
         organic: false,
         height: 6,
         width: 6,
+        number_of_spots:,
         description:
       }, {
         id: 9,
@@ -66,6 +74,7 @@ exports.seed = (knex) => {
         organic: false,
         height: 6,
         width: 6,
+        number_of_spots:,
         description:
       }, {
         id: 10,
@@ -73,6 +82,7 @@ exports.seed = (knex) => {
         organic: false,
         height: 6,
         width: 6,
+        number_of_spots:,
         description:
       }, {
         id: 11,
@@ -80,6 +90,7 @@ exports.seed = (knex) => {
         organic: false,
         height: 6,
         width: 6,
+        number_of_spots:,
         description:
       }, {
         id: 12,
@@ -87,6 +98,7 @@ exports.seed = (knex) => {
         organic: false,
         height: 6,
         width: 6,
+        number_of_spots:,
         description:
       }, {
         id: 13,
@@ -94,6 +106,7 @@ exports.seed = (knex) => {
         organic: false,
         height: 6,
         width: 6,
+        number_of_spots:,
         description:
       }, {
         id: 14,
@@ -101,6 +114,7 @@ exports.seed = (knex) => {
         organic: false,
         height: 6,
         width: 6,
+        number_of_spots:,
         description:
       }, {
         id: 15,
@@ -108,6 +122,7 @@ exports.seed = (knex) => {
         organic: false,
         height: 6,
         width: 6,
+        number_of_spots:,
         description:
       }, {
         id: 16,
@@ -115,6 +130,7 @@ exports.seed = (knex) => {
         organic: false,
         height: 6,
         width: 6,
+        number_of_spots:,
         description:
       }, {
         id: 17,
@@ -122,6 +138,7 @@ exports.seed = (knex) => {
         organic: false,
         height: 6,
         width: 6,
+        number_of_spots:,
         description:
       }]);
     })
