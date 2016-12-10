@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-
+const less = require('gulp-less');
 const webpack = require('webpack-stream');
 
 gulp.task('webpack:dev', () => {
@@ -19,8 +19,8 @@ gulp.task('static:dev', () => {
   .pipe(gulp.dest('./build'));
 });
 
-gulp.task('css:dev', () => {
-    gulp.src(['client/css/*.css'])
+gulp.task('less:dev', () => {
+    gulp.src(['client/less/*.less'])
     .pipe(less())
     .pipe(gulp.dest('./build/css'));
 });
@@ -31,7 +31,7 @@ gulp.task('css:dev', () => {
 });
 
 
-gulp.task('build', ['webpack:dev', 'static:dev', 'css:dev']);
+gulp.task('build', ['webpack:dev', 'static:dev', 'css:dev', 'less:dev']);
 
 
 gulp.task('default', ['build']);
