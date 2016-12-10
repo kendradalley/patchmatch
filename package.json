@@ -4,7 +4,8 @@
   "description": "A crowd-sourcing service for connecting people with extra yard space and people who want to garden.",
   "main": "knexfile.js",
   "scripts": {
-    "knex": "knex"
+    "knex": "knex",
+    "start": "gulp && node index"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,13 @@
   },
   "homepage": "https://github.com/nicolecpeoples/patchmatch#readme",
   "dependencies": {
+    "express": "^4.14.0",
     "knex": "^0.12.6"
+  },
+  "devDependencies": {
+    "angular": "^1.6.0",
+    "angular-ui-router": "^0.3.2",
+    "gulp": "^3.9.1",
+    "webpack-stream": "^3.2.0"
   }
 }
