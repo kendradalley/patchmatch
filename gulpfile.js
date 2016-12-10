@@ -20,7 +20,7 @@ gulp.task('static:dev', () => {
 });
 
 gulp.task('css:dev', () => {
-    gulp.src(['client/less/*.less'])
+    gulp.src(['client/css/*.css'])
     .pipe(less())
     .pipe(gulp.dest('./build/css'));
 });
