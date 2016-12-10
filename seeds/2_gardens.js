@@ -42,8 +42,8 @@ exports.seed = (knex) => {
         location:
       }, {
         id: 10,
-        user_id:
-        location:
+        user_id: 10
+        location: 
       }, {
         id: 11,
         user_id:

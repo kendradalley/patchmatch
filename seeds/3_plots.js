@@ -10,7 +10,7 @@ exports.seed = (knex) => {
         organic: false,
         height: 2.5,
         width: 3,
-        description:
+        description: 
       }, {
         id: 2,
         garden_id:
