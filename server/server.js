@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const userRouter = require(__dirname + '/../routes/users');
 
 app.set('port', process.env.PORT || 3000);
 app.use((req, res, next) => {
