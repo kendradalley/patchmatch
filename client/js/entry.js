@@ -1,9 +1,10 @@
 
 const angular = require('angular');
 require('angular-ui-router');
+require('ngmap');
 
 
-const pmApp = angular.module('pmApp',  ['ui.router']);
+const pmApp = angular.module('pmApp',  ['ui.router', 'ngMap']);
 
 require('./garden_owners')(pmApp);
 require('./main_page')(pmApp);
@@ -17,12 +18,11 @@ pmApp.config(($stateProvider, $urlRouterProvider)=>{
         controllerAs: '$ctrl'
     })
 
-    .state('garden_info_view', {
+    .state('index', {
         url:'/',
-        // templateUrl: 'templates/main_page/views/garden_info_view.html',
         controller: 'mainController',
         controllerAs: 'mainController'
-    });
+    })
 
     .state('garden_info_view', {
         url:'/gardeninfo',
