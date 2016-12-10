@@ -19,7 +19,8 @@
   "homepage": "https://github.com/nicolecpeoples/patchmatch#readme",
   "dependencies": {
     "express": "^4.14.0",
-    "knex": "^0.12.6"
+    "knex": "^0.12.6",
+    "ngmap": "^1.17.8"
   },
   "devDependencies": {
     "angular": "^1.6.0",
