@@ -9,6 +9,7 @@ exports.up = function(knex) {
     table.integer('height').notNullable();
     table.integer('width').notNullable();
     table.string('description').notNullable();
+    table.integer('number_of_spots').notNullable();
     table.timestamps(true, true);
   });
 };
