@@ -3,7 +3,9 @@
 const express = require('express');
 const router = express.Router(); // eslint-disable-line new-cap
 const knex = require('../knex');
-const { camelizeKeys } = require('humps');
+const humps = require('humps');
+const camelizeKeys = humps.camelizeKeys;
+const decamelizeKeys = humps.decamelizeKeys;
 
 router.get('/plots', (req, res) => {
   knex('plots')
@@ -12,7 +14,11 @@ router.get('/plots', (req, res) => {
 });
 
 router.post('/plots/:gardenId', (req, res, next) => {
-  const { organic, height, width, description, numberOfSpots } = req.body;
+    const organic = req.body.organic;
+    const height = req.body.height;
+    const width = req.body.width;
+    const description = req.body.description;
+    const numberOfSpots = req.body.numberOfSpots;
   const gardenId = req.params.gardenId;
   const plot = { gardenId, organic, height, width, description, numberOfSpots };
 

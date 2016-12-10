@@ -3,64 +3,69 @@
 const express = require('express');
 const router = express.Router(); // eslint-disable-line new-cap
 const knex = require('../knex');
-const { camelizeKeys } = require('humps');
+const humps = require('humps');
+const camelizeKeys = humps.camelizeKeys;
+const decamelizeKeys = humps.decamelizeKeys;
 
 router.get('/users', (req, res) => {
-  knex('users')
+    knex('users')
     .then((rows) => res.send(camelizeKeys(rows)))
     .catch((err) => next(err));
 });
 
 router.post('/users', (req, res, next) => {
-  const { name, emailAddress } = req.body;
+    const name = req.body.name;
+    const emailAddress = req.body.emailAddress;
 
-  knex('users')
+    knex('users')
     .select(knex.raw('1=1'))
     .where('email', email)
     .first()
     .then((exists) => {
-      if (exists) {
-        throw boom.create(400, 'Email already exists');
-      }
+        if (exists) {
+            throw boom.create(400, 'Email already exists');
+        }
 
-      const insertUser = { name, emailAddress };
+        const insertUser = { name, emailAddress };
 
-      return knex('users')
+        return knex('users')
         .insert(decamelizeKeys(insertUser), '*');
     })
     .then((rows) => {
-      const user = decamelizeKeys(rows[0]);
+        const user = decamelizeKeys(rows[0]);
 
-      res.send(user);
+        res.send(user);
     })
     .catch((err) => next(err));
 });
 
 router.delete('/users/:id', (req, res, next) => {
-  const id = req.params.id;
+    const id = req.params.id;
 
-  if (isNaN(id)) { return next(boom.create(404, 'Not Found')); }
-  knex('users')
+    if (isNaN(id)) { return next(boom.create(404, 'Not Found')); }
+    knex('users')
     .where('id', id)
     .first()
     .then((row) => {
-      if (!row) { throw boom.create(404, 'Not Found'); }
+        if (!row) { throw boom.create(404, 'Not Found'); }
 
-      user = row;
+        user = row;
 
-      return knex('users')
+        return knex('users')
         .where('id', id)
         .del();
     })
     .then(() => {
-      delete user.id;
-      const deletedUser = camelizeKeys(user);
+        delete user.id;
+        const deletedUser = camelizeKeys(user);
 
-      res.send(deletedUser);
+        res.send(deletedUser);
     })
     .catch((err) => {
-      next(err);
+        next(err);
     });
 }
+
+);
 
 module.exports = router;
