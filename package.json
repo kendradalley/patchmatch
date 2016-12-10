@@ -1,0 +1,22 @@
+{
+  "name": "patchmatch",
+  "version": "1.0.0",
+  "description": "A crowd-sourcing service for connecting people with extra yard space and people who want to garden.",
+  "main": "knexfile.js",
+  "scripts": {
+    "knex": "knex"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolecpeoples/patchmatch.git"
+  },
+  "author": "many",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicolecpeoples/patchmatch/issues"
+  },
+  "homepage": "https://github.com/nicolecpeoples/patchmatch#readme",
+  "dependencies": {
+    "knex": "^0.12.6"
+  }
+}
