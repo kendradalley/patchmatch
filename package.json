@@ -20,7 +20,8 @@
   "dependencies": {
     "express": "^4.14.0",
     "knex": "^0.12.6",
-    "ngmap": "^1.17.8"
+    "ngmap": "^1.17.8",
+    "skeleton-css": "^2.0.4"
   },
   "devDependencies": {
     "angular": "^1.6.0",

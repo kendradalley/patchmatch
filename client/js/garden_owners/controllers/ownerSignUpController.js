@@ -3,7 +3,5 @@ module.exports = function(app) {
         this.message = 'hi, I\'m still here';
         console.log('controller');
 
-    }
-    ]
-);
+    }]);
 };
